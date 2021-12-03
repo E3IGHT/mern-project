@@ -6,6 +6,8 @@ const FormatChoose = styled.div`
     flex-direction: column;
 
     background-image: url('/assets/images/background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     min-height: 100vh;
     color: white;
 

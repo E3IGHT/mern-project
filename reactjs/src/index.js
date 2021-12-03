@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Home from '../src/pages/inicial'
 import ChooseDay from '../src/pages/chooseday'
+import ChooseFilm from './pages/choosefilm'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChooseDay />
+    <ChooseFilm />
   </React.StrictMode>,
   document.getElementById('root')
 );
