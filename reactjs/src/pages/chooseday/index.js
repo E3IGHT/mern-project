@@ -12,7 +12,7 @@ export default function ChooseDay () {
                     <LogoFormat2 />
             </div>
             <div className="container">
-                <TextStyled> Escolha a data que você deseja comprar o ingresso. </TextStyled>
+                <div className="tit"> <TextStyled> Escolha a data que você deseja comprar o ingresso. </TextStyled> </div>
                 <div className="dates">
                     <BigBox />
 

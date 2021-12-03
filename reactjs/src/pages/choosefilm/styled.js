@@ -8,11 +8,43 @@ const FilmFormat = styled.div`
     background-size: 100% 100%;
     min-height: 100vh;
 
+    .header {
+        padding: 1em 1em;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .logo {
+        display: flex;
+        flex-grow: 0.3;
+    }
+
+    .container {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .films {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+
+
 
 `
 
-// #AA0A0A;
-// box-shadow: 2px -2px 3px 2px rgba(11, 0, 0, 0.25);
-// border-radius: 16px 16px 0p
+
 
 export { FilmFormat }

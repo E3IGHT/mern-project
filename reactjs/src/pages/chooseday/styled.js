@@ -19,6 +19,10 @@ const FormatChoose = styled.div`
         padding: 2em 2em;
     }
 
+    .tit {
+        margin-bottom: 3em;
+    }
+
     .header {
         display: flex;
         padding: 1em;

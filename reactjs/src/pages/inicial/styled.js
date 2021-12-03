@@ -37,6 +37,7 @@ const Inicial = styled.div`
 
     .tit {
         font-size: 2.2rem;
+        margin-bottom: 3em;
     }
 
     .logo-name {
