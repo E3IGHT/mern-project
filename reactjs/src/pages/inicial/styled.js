@@ -13,7 +13,13 @@ const Inicial = styled.div`
     background-image: url('/assets/images/background.png');
     background-size: 100% 100%;
 
-    padding: 3em 3em;
+    .container {
+        padding: 3em 3em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
 
     .logo {
@@ -50,6 +56,9 @@ const Inicial = styled.div`
         background: linear-gradient(183.2deg, #861B1B 12.34%, #F80000 148.35%);
         box-shadow: 8px 5px 5px 2px rgba(0, 0, 0, 0.25);
         border-radius: 0.8em;
+        color: white;
+        border: none;
+        
 
 
         padding: 1em;
@@ -57,6 +66,12 @@ const Inicial = styled.div`
         font-size: 1.6em;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+    }
+
+    .buyticket:hover {
+        background: #861B1B;
+        cursor: pointer;
+        transition: 0.1s;
     }
 
 
