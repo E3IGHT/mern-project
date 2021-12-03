@@ -1,12 +1,11 @@
 import { Inicial } from "./styled"
+import LogoFormat1 from "../../components/logo-format"
+import LogoFormat2 from "../../components/other-logo"
 
 export default function Home () {
     return (
         <Inicial>
-            <div className="logo">
-                <div className="logo-image"> <img src="/assets/images/ticket.png" width="60em" height="65em"/> </div>
-                <div className="logo-name"> CineMonk </div>
-            </div>
+            <LogoFormat2 />
             <div className="tit"> O que você quer fazer? </div>
             <div className="buyticket"> Comprar <br /> Ingresso </div>
         </Inicial>
