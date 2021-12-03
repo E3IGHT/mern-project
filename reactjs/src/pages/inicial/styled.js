@@ -35,21 +35,15 @@ const Inicial = styled.div`
         margin-bottom: 0.5em;
     }
 
+    .tit {
+        font-size: 2.2rem;
+    }
+
     .logo-name {
         font-size: 1.8rem;
         color: rgba(240, 161, 36, 1);
 
         text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-    }
-
-    .tit {
-        font-size: 2.2rem;
-        color: #E1E1E1;
-        text-shadow: 1px 1px 4px rgba(202, 202, 202, 0.87);
-
-
-        margin-bottom: 3em;
-
     }
 
     .buyticket {
@@ -71,7 +65,6 @@ const Inicial = styled.div`
     .buyticket:hover {
         background: #861B1B;
         cursor: pointer;
-        transition: 0.1s;
     }
 
 

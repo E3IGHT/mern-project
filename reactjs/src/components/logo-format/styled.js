@@ -27,9 +27,8 @@ const L2 = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
 
-        margin-bottom: 4em;
+        padding: 1em;
     
 
     .logo-image {
