@@ -38,30 +38,7 @@ const Seats = styled.div`
         justify-content: center;
     }
 
-    .imagebox {
-        background-color: #AA0A0A;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 0.3em;
-
-        margin-right: 4em;
-
-        
-        box-shadow: 2px -2px 3px 2px rgba(11, 0, 0, 0.25);
-        border-radius: 16px 16px 16px 0px;
-    }
-
-    .title {
-        width: 9.5em;
-        color: rgba(255, 202, 118, 1);
-        font-size: large;
-
-        margin-bottom: 0.5em;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
+    
 
     .description {
         font-size: small;
@@ -76,29 +53,6 @@ const Seats = styled.div`
 
         width: 30em;
     }
-
-    .boxtwo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-
-        background-color: #AA0A0A;
-        padding: 1em;
-        border-radius: 0.7em;
-
-        margin: 0.5em;
-        
-    }
-
-    .thedescrpt {
-        font-size:  medium;
-    }
-
-    .thehour {
-        font-size: xx-large;
-    }
-
 
 
 
