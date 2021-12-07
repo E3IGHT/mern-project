@@ -5,10 +5,11 @@ import Home from '../src/pages/inicial'
 import ChooseDay from '../src/pages/chooseday'
 import ChooseFilm from './pages/choosefilm'
 import ChooseSeat from './pages/chooseseat'
+import Payment from './pages/payment'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChooseSeat />
+    <Payment />
   </React.StrictMode>,
   document.getElementById('root')
 );
