@@ -56,8 +56,8 @@ export default function Payment () {
                         <div className="op-price">
                             <div className="otitle"> Pedido </div>
                             <div className="oooo">
-                                <div className="description"> Ingressos Meia: 03 </div>
-                                <div className="description"> Ingressos Inteira: 01 </div>
+                                <div className="descript"> Ingressos Meia: 03 </div>
+                                <div className="descript"> Ingressos Inteira: 01 </div>
                             </div>
                             <div className="all"> Total: R$ 100,00 </div>
                         </div>

@@ -64,12 +64,14 @@ background-image: url('/assets/images/background.png');
     label {
         font-size: large;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-weight: 500;
+        margin-right: 1em;
     }
 
     select {
         border: 0.1em solid black;
-        border-radius: 3em;
-        padding: 0.3em 1.2em;
+        border-radius: 2.5em;
+        padding: 0.3em 1.5em;
         margin: 0.2em;
 
         color: rgba(79, 79, 79, 1);
@@ -79,13 +81,18 @@ background-image: url('/assets/images/background.png');
         margin-bottom: 3em;
     }
 
-    .description {
+    .descript {
         font-size: larger;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-weight: 500;
         
     }
 
     .all {
         font-size: x-large;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-weight: 700;
+
     }
 
     .botao {
