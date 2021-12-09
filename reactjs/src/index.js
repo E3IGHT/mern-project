@@ -6,10 +6,11 @@ import ChooseDay from '../src/pages/chooseday'
 import ChooseFilm from './pages/choosefilm'
 import ChooseSession from './pages/choosesession';
 import Payment from './pages/payment'
+import AllTickets from './pages/alltickets'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Payment />
+    <AllTickets />
   </React.StrictMode>,
   document.getElementById('root')
 );

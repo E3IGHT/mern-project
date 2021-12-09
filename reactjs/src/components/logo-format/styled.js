@@ -7,7 +7,7 @@ const L1 = styled.div`
         align-items: center;
         justify-content: center;
 
-        margin-bottom: 4em;
+        margin-bottom: 2em;
     
 
     .logo-image {
