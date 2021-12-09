@@ -9,7 +9,7 @@ import Payment from './pages/payment'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChooseSession />
+    <Payment />
   </React.StrictMode>,
   document.getElementById('root')
 );

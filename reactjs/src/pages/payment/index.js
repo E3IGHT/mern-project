@@ -1,4 +1,4 @@
-import ImBox from "../chooseseat/boxes/image-box";
+import ImBox from "../choosesession/boxes/image-box";
 import LogoFormat2 from "../../components/other-logo";
 import { TextStyled } from "../../components/text-type";
 import { ForPayment } from "./styled";

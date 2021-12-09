@@ -32,7 +32,7 @@ background-image: url('/assets/images/background.png');
     }
 
     .opt-box {
-        padding: 1.2em;
+        padding: 1.5em;
         display: flex;
         flex-direction: row;
 
@@ -58,7 +58,7 @@ background-image: url('/assets/images/background.png');
         width: 0.11em;
         height: 13em;
 
-        margin: 0em 2em 0em 2em;
+        margin: 0em 4em 0em 4em;
         background-color: rgba(90, 16, 16, 1);
     }
     label {
