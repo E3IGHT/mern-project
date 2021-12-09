@@ -32,18 +32,14 @@ background-image: url('/assets/images/background.png');
     }
 
     .opt-box {
-        padding: 1.5em;
+        padding: 1.2em;
         display: flex;
         flex-direction: row;
 
         background: linear-gradient(180deg, #AA0A0A 0%, rgba(83, 0, 0, 0.92) 126.82%);
         border-radius: 0.4em;
 
-        margin-bottom: 4em;
-    }
-
-    .op-seats {
-        
+        margin-bottom: 3em;
     }
 
     .otitle {
@@ -60,7 +56,7 @@ background-image: url('/assets/images/background.png');
 
     .linha {
         width: 0.11em;
-        height: 10em;
+        height: 13em;
 
         margin: 0em 2em 0em 2em;
         background-color: rgba(90, 16, 16, 1);
@@ -75,6 +71,21 @@ background-image: url('/assets/images/background.png');
         border-radius: 3em;
         padding: 0.3em 1.2em;
         margin: 0.2em;
+
+        color: rgba(79, 79, 79, 1);
+    }
+
+    .oooo {
+        margin-bottom: 3em;
+    }
+
+    .description {
+        font-size: larger;
+        
+    }
+
+    .all {
+        font-size: x-large;
     }
 
     .botao {
