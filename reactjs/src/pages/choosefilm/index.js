@@ -2,6 +2,7 @@ import LogoFormat2 from "../../components/other-logo"
 import { TextStyled } from "../../components/text-type"
 import { FilmFormat } from "./styled"
 import BoxFilm from "./film-box-format"
+import { Link } from "react-router-dom"
 
 export default function ChooseFilm () {
     return (
@@ -12,12 +13,12 @@ export default function ChooseFilm () {
             </div>
             <div className="container">
                 <div className="films">
-                    <BoxFilm />
-                    <BoxFilm />
-                    <BoxFilm />
-                    <BoxFilm />
-                    <BoxFilm />
-                    <BoxFilm />
+                    <Link to="/choosesession"> <BoxFilm /> </Link>
+                    <Link to="/choosesession"> <BoxFilm /> </Link>
+                    <Link to="/choosesession"> <BoxFilm /> </Link>
+                    <Link to="/choosesession"> <BoxFilm /> </Link>
+                    <Link to="/choosesession"> <BoxFilm /> </Link>
+                    <Link to="/choosesession"> <BoxFilm /> </Link>
                 </div>
             </div>
         </FilmFormat>

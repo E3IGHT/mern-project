@@ -1,6 +1,7 @@
 import LogoFormat2 from "../../components/other-logo";
 import { TextStyled } from "../../components/text-type";
 import { FormatChoose } from "./styled";
+import { Link } from "react-router-dom";
 import BigBox from './boxes/big-box'
 import MiniBox from './boxes/mini-box'
 
@@ -14,15 +15,15 @@ export default function ChooseDay () {
             <div className="container">
                 <div className="tit"> <TextStyled> Escolha a data que você deseja comprar o ingresso. </TextStyled> </div>
                 <div className="dates">
-                    <BigBox />
+                    <Link to="/choosefilm"> <BigBox /> </Link>
 
                     <div className="otherdates">
-                        <MiniBox />
-                        <MiniBox />
-                        <MiniBox />
-                        <MiniBox />
-                        <MiniBox />
-                        <MiniBox /> 
+                        <Link to="/choosefilm"> <MiniBox /> </Link>
+                        <Link to="/choosefilm"> <MiniBox /> </Link>
+                        <Link to="/choosefilm"> <MiniBox /> </Link>
+                        <Link to="/choosefilm"> <MiniBox /> </Link>
+                        <Link to="/choosefilm"> <MiniBox /> </Link>
+                        <Link to="/choosefilm"> <MiniBox /> </Link>
                     </div>
                 </div>
             </div>
