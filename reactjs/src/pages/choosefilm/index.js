@@ -4,7 +4,10 @@ import { FilmFormat } from "./styled"
 import BoxFilm from "./film-box-format"
 import { Link } from "react-router-dom"
 
-export default function ChooseFilm () {
+export default function ChooseFilm (props) {
+
+    console.log(props);
+
     return (
         <FilmFormat>
             <div className="header">

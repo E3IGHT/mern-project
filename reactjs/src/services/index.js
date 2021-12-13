@@ -7,7 +7,7 @@ const api = axios.create ({
 export default class Api {
     
     async availableDates () {
-        let r = await api.get(`/avaliableDays`);
+        let r = await api.get(`/availableDays`);
         return r.data;
     }
 

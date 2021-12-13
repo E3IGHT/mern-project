@@ -67,11 +67,11 @@ app.get('/availableDays', async (req,resp) => {
             let thatDay = today();
 
         const allDays = await dbSessions.aggregate([
-            { $match: { data: { $gte:  thatDay } }},
+            { $match: { data: { $gt:  thatDay } }},
             { $group: { _id: '$data' } },
             { $project: { _id: 0, data: '$_id'  } },
             { $sort: { data: 1 }},
-            { $limit: 7 }
+            { $limit: 6 }
         ]).toArray();
 
         
@@ -116,11 +116,14 @@ app.get('/availableSessions', async (req, resp) => {
         console.log(film);
         console.log(date);
 
-        let session = await dbSessions.find({
-                data: date
-            })
-            .project({ _id: 0 }).toArray();
+        let session = await dbSessions.aggregate([
+            { '$unwind': '$filme' },
+            { '$match': { data: date, nome: film } },
+            { '$project': { _id: 0 } }
+        ]).toArray();
+        
 
+        
         resp.send(session);
 
     } catch(e) {

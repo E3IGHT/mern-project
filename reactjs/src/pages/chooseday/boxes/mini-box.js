@@ -1,11 +1,17 @@
+import { useState } from "react";
 import styled from "styled-components";
 
-export default function MiniBox() {
+export default function MiniBox(props) {
+
+    const [informations, setInformations] = useState(props.info);
+
+
+
     return(
         <FormatMini>
-            <div className="weekday"> Hoje </div>
-            <div className="numberday"> 04 </div>
-            <div className="month"> Maio </div>
+            <div className="weekday"> { informations.diaSemana } </div>
+            <div className="numberday"> {informations.dia} </div>
+            <div className="month"> {informations.mes} </div>
         </FormatMini>
     )
 }
