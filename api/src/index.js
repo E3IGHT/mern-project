@@ -19,8 +19,6 @@ function today() {
     return `${yy}-${mm}-${dd}`
 }
 
-console.log(today());
-
 
 function dayNumber(date) {
     date = new Date(`${date}T00:00:00`);
@@ -63,7 +61,7 @@ function monthName(date) {
     }
 }
 
-app.get('/avaliableDays', async (req,resp) => {
+app.get('/availableDays', async (req,resp) => {
 
     try {
             let thatDay = today();
@@ -95,13 +93,13 @@ app.get('/avaliableDays', async (req,resp) => {
 
 })
 
-app.get('/avaliableMovies/', async (req,resp) => {
+app.get('/availableMovies', async (req,resp) => {
     try {
 
-        let { date } = req.query.data;
-        console.log(date);
+        let { date } = req.query;
+        
 
-        let movies = dbSessions.find({data: date}).project({ _id: 0 }).toArray();
+        let movies = await dbSessions.find({ data: date }).project({ _id: 0 }).toArray();
 
         resp.send(movies);
 
@@ -111,6 +109,37 @@ app.get('/avaliableMovies/', async (req,resp) => {
     }
 })
 
+app.get('/availableSessions', async (req, resp) => {
+    try {
+
+        let { film, date } = req.query;
+        console.log(film);
+        console.log(date);
+
+        let session = await dbSessions.find({
+                data: date
+            })
+            .project({ _id: 0 }).toArray();
+
+        resp.send(session);
+
+    } catch(e) {
+        resp.send(e.toString());
+    }
+})
+
+// app.get('/availableMovies', async (req, resp) => {
+//     let { date } = req.query;
+//     console.log(date);
+
+//     let movies = await
+//         dbSessions
+//             .find({ data: date })
+//             .project({ _id: 0 })
+//             .toArray();
+    
+//     resp.send(movies);
+// })
 
 
 app.listen(process.env.PORT, () => console.log('subiu!'))

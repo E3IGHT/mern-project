@@ -6,8 +6,13 @@ const api = axios.create ({
 
 export default class Api {
     
-    async avaliableDates () {
+    async availableDates () {
         let r = await api.get(`/avaliableDays`);
+        return r.data;
+    }
+
+    async availableMovies(data) {
+        let r = await api.get(`/availableMovies?date=${data}`);
         return r.data;
     }
 
