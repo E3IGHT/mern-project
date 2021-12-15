@@ -4,7 +4,6 @@ import styled from "styled-components";
 export default function ImBox (props) {
 
     let imbox = props.info.filme;
-    console.log(imbox)
 
     return (
         <BoxImage>

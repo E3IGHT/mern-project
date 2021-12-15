@@ -3,7 +3,6 @@ import styled from "styled-components";
 export default function TMiniBox (props) {
 
     let session = props.info;
-    console.log(session)
 
     return (
         <HMBox>

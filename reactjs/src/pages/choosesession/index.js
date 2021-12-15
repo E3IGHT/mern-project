@@ -41,7 +41,7 @@ export default function ChooseSession() {
                     
                     <div className="oboxes">
                         {session.map((item) => 
-                            <Link to="/chooseseat"> <TMiniBox info={item} /> </Link> 
+                            <Link to="/chooseseat" state={item} > <TMiniBox info={item} /> </Link> 
                         )}
                         
                     </div>
