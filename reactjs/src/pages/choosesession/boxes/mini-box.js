@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-export default function TMiniBox () {
+export default function TMiniBox (props) {
+
+    let session = props.info;
+    console.log(session)
+
     return (
         <HMBox>
-            <div className="theroom"> Sala 08 </div>
-            <div className="thehour"> 13:00 </div>
-            <div className="thedescrpt"> Legendado </div>
+            <div className="theroom"> Sala {session.sala} </div>
+            <div className="thehour"> {session.hora} </div>
+            <div className="thedescrpt"> {session.audio} </div>
         </HMBox>
     )
 }

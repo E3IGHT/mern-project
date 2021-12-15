@@ -1,6 +1,14 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom";
 
 export default function BigBox() {
+
+    let that = {
+        data: today(),
+        diaSemana: dayOfWeek(today()),
+        mes: monthName(today()),
+        dia: dayNumber(today())
+    }
 
     function today() {
         let data = new Date();
@@ -53,12 +61,13 @@ export default function BigBox() {
 
 
     return (
-
-        <GiantBox>
-            <div className="weekday"> {dayOfWeek(today())} </div>
-            <div className="numberday"> {dayNumber(today())} </div>
-            <div className="month"> {monthName(today())} </div>
-        </GiantBox>
+        <Link to='/choosefilm' state={that.data} >
+            <GiantBox>
+                <div className="weekday"> {that.diaSemana} </div>
+                <div className="numberday"> {that.dia} </div>
+                <div className="month"> {that.mes} </div>
+            </GiantBox>
+        </Link>
     )
 }
 

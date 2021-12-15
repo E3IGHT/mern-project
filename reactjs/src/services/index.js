@@ -11,8 +11,13 @@ export default class Api {
         return r.data;
     }
 
-    async availableMovies(data) {
-        let r = await api.get(`/availableMovies?date=${data}`);
+    async availableMovies(date) {
+        let r = await api.get(`/availableMovies?date=${date}`);
+        return r.data;
+    }
+
+    async availableSessions(film,date) {
+        let r = await api.get(`/availableSessions?film=${film}&date=${date}`);
         return r.data;
     }
 

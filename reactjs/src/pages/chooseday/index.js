@@ -15,6 +15,7 @@ export default function ChooseDay () {
 
     const [day, setDay] = useState([]);
 
+    console.log(day);
 
     function today() {
         let data = new Date();
@@ -43,17 +44,13 @@ export default function ChooseDay () {
             <div className="container">
                 <div className="tit"> <TextStyled> Escolha a data que você deseja comprar o ingresso. </TextStyled> </div>
                 <div className="dates">
-                    
-                    <Link to={{
-                        pathname: "/choosefilm",
-                        state: today() }}> <BigBox /> </Link>
-
+                        <BigBox />
                     <div className="otherdates">
+                    
                     { day.map (item =>
-                        <Link to={{
-                            pathname: "/choosefilm",
-                            state: item
-                        }}> <MiniBox info={item} key={item.id} /> </Link>
+                       <Link to="/choosefilm" state={item.data} >
+                            <MiniBox info={item} key={item.id} />
+                       </Link>
                     )}
                         
                        

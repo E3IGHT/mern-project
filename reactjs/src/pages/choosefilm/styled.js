@@ -24,6 +24,7 @@ const FilmFormat = styled.div`
         padding: 1em;
         display: flex;
         flex-direction: column;
+
         justify-content: center;
         align-items: center;
 
@@ -32,6 +33,8 @@ const FilmFormat = styled.div`
     .films {
         display: flex;
         flex-direction: row;
+        width: 90%;
+        
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;

@@ -1,18 +1,21 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function MiniBox(props) {
+
+    console.log(props);
 
     const [informations, setInformations] = useState(props.info);
 
 
-
     return(
-        <FormatMini>
-            <div className="weekday"> { informations.diaSemana } </div>
-            <div className="numberday"> {informations.dia} </div>
-            <div className="month"> {informations.mes} </div>
-        </FormatMini>
+            <FormatMini>
+                <div className="weekday"> { informations.diaSemana } </div>
+                <div className="numberday"> {informations.dia} </div>
+                <div className="month"> {informations.mes} </div>
+            </FormatMini>
+        
     )
 }
 

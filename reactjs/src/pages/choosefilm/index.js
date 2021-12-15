@@ -3,10 +3,25 @@ import { TextStyled } from "../../components/text-type"
 import { FilmFormat } from "./styled"
 import BoxFilm from "./film-box-format"
 import { Link } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 
-export default function ChooseFilm (props) {
+import Api from '../../services'
+import { useEffect, useState } from "react"
+const api = new Api();
 
-    console.log(props);
+export default function ChooseFilm () {
+
+    const[movie, setMovie] = useState([])
+    const navigate = useLocation();
+
+    async function listar () {
+        let resp = await api.availableMovies(navigate.state);
+        setMovie(resp)
+    }
+
+    useEffect(() => {
+        listar();
+    }, [] );
 
     return (
         <FilmFormat>
@@ -16,12 +31,10 @@ export default function ChooseFilm (props) {
             </div>
             <div className="container">
                 <div className="films">
-                    <Link to="/choosesession"> <BoxFilm /> </Link>
-                    <Link to="/choosesession"> <BoxFilm /> </Link>
-                    <Link to="/choosesession"> <BoxFilm /> </Link>
-                    <Link to="/choosesession"> <BoxFilm /> </Link>
-                    <Link to="/choosesession"> <BoxFilm /> </Link>
-                    <Link to="/choosesession"> <BoxFilm /> </Link>
+                    {movie.map((item) =>
+                        <Link to="/choosesession" state={item}> <BoxFilm info={item} /> </Link>
+                    )}
+                    
                 </div>
             </div>
         </FilmFormat>
