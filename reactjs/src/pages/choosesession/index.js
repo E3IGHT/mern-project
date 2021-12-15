@@ -3,6 +3,7 @@ import { TextStyled } from "../../components/text-type"
 import { Session } from "./styled"
 import TMiniBox from './boxes/mini-box'
 import ImBox from './boxes/image-box'
+import { Link } from "react-router-dom"
 
 export default function ChooseSession() {
     return (
@@ -17,12 +18,12 @@ export default function ChooseSession() {
                     <ImBox />
                     
                     <div className="oboxes">
-                        <TMiniBox />
-                        <TMiniBox />
-                        <TMiniBox />
-                        <TMiniBox />
-                        <TMiniBox />
-                        <TMiniBox />
+                        <Link to="/chooseseat"> <TMiniBox /> </Link> 
+                        <Link to="/chooseseat"> <TMiniBox /> </Link> 
+                        <Link to="/chooseseat"> <TMiniBox /> </Link> 
+                        <Link to="/chooseseat"> <TMiniBox /> </Link> 
+                        <Link to="/chooseseat"> <TMiniBox /> </Link> 
+                        <Link to="/chooseseat"> <TMiniBox /> </Link> 
                     </div>
                 </div>
             </div>

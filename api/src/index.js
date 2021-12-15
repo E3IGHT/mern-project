@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import path from 'path'
 import { MongoClient, ObjectId } from 'mongodb'
+import { DESTRUCTION } from 'dns';
 
 const app = express();
 app.use(cors());
@@ -10,6 +11,7 @@ app.use(express.json());
 
 const connectx = await MongoClient.connect('mongodb+srv://devmonk:d3v@cluster.ru31h.mongodb.net');
 const dbSessions = await connectx.db('ingressos').collection('sessoes');
+const dbSeats = await connectx.db('ingressos').collection('lugares');
 
 function today() {
     let data = new Date();
@@ -113,36 +115,37 @@ app.get('/availableSessions', async (req, resp) => {
     try {
 
         let { film, date } = req.query;
-        console.log(film);
-        console.log(date);
 
-        let session = await dbSessions.aggregate([
-            { '$unwind': '$filme' },
-            { '$match': { data: date, nome: film } },
-            { '$project': { _id: 0 } }
-        ]).toArray();
-        
+        let session = await dbSessions.findOne({
+            'data': date,
+            'filme.nome': film
+        });
 
-        
-        resp.send(session);
+        resp.send(session.horarios)
 
     } catch(e) {
         resp.send(e.toString());
     }
 })
 
-// app.get('/availableMovies', async (req, resp) => {
-//     let { date } = req.query;
-//     console.log(date);
+app.get('/availableSeats', async (req,resp) => {
+    try {
 
-//     let movies = await
-//         dbSessions
-//             .find({ data: date })
-//             .project({ _id: 0 })
-//             .toArray();
-    
-//     resp.send(movies);
-// })
+        let { date, film, hour, room } = req.query;
+
+        let seats =  await dbSeats.find({
+            data: date,
+            'filme.nome': film,
+            hora: hour,
+            sala: room
+        }).sort( { 'lugar.letra': 1 }, { 'lugar.numero': 1 } ).toArray();
+
+        resp.send(seats);
+
+    } catch (e) {
+        resp.send(e.toString());
+    }
+})
 
 
 app.listen(process.env.PORT, () => console.log('subiu!'))

@@ -5,6 +5,7 @@ import ChooseFilm from './pages/choosefilm'
 import ChooseSession from './pages/choosesession';
 import Payment from './pages/payment'
 import AllTickets from './pages/alltickets'
+import ChooseSeat from './pages/chooseseat';
 
 export default function Rotas () {
     return (
@@ -16,6 +17,7 @@ export default function Rotas () {
                 <Route path="/choosesession" element={<ChooseSession />} />
                 <Route path="/payment" element={<Payment />} />
                 <Route path="/alltickets" element={<AllTickets />} />
+                <Route path="/chooseseat" element={<ChooseSeat />} />
             </Routes>     
         </BrowserRouter>
     )
