@@ -6,6 +6,7 @@ import {None} from "./seats/none-format";
 
 
 export default function Row () {
+
     return (
         <TRow>
             <div className="row">
@@ -60,20 +61,6 @@ const TRow = styled.div`
         position: relative;
         display: flex;
         align-items: center;
-    }
-
-    .seat {
-        padding: 0.15em;
-    }
-
-    .numb {
-        position: absolute;
-
-        top: 0.8em;
-        padding: 0em 0.65em;
-
-        font-weight: 700;
-        font-size: 0.9em;
     }
 
 `

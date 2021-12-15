@@ -135,15 +135,61 @@ app.get('/availableSeats', async (req,resp) => {
 
         let seats =  await dbSeats.find({
             data: date,
-            'filme.nome': film,
+            filme: film,
             hora: hour,
             sala: room
-        }).sort( { 'lugar.letra': 1 }, { 'lugar.numero': 1 } ).toArray();
+        }).sort( { 'lugar.letra': 1, 'lugar.numero': 1 }).toArray();
 
-        resp.send(seats);
+        let fileiras = [];
+        let objFileira = {};
+
+        for( let seat of seats) {
+            if( seat.lugar.letra !== objFileira.fileira ) {
+                objFileira = {
+                    fileira: seat.lugar.letra,
+                    lugares: []
+                }
+                fileiras.push(objFileira);
+            }
+
+            objFileira.lugares.push({
+                numero: seat.lugar.numero,
+                situacao: seat.lugar.situacao,
+                usuario: seat.lugar.usuario
+            })
+        }
+
+        resp.send(fileiras);
 
     } catch (e) {
         resp.send(e.toString());
+    }
+})
+
+app.put('/reserveSeat', async (req,resp) => {
+    try {
+
+        let { seat: { date, film, hour, room, letter, number }, user } = req.body;
+
+        let seats = await dbSeats.updateOne({
+            data: date,
+            filme: film,
+            hora: hour,
+            sala: room,
+            'lugar.letra': letter,
+            'lugar.numero': number
+        }, {
+            '$set': {
+                'lugar.situacao': 'Reservado',
+                'lugar.usuario': user,
+                'lugar.dataReserva': new Date()
+            }
+        })
+
+        resp.sendStatus(200);
+
+    } catch(e) {
+
     }
 })
 
