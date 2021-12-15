@@ -9,7 +9,7 @@ color: white;
     min-height: 100vh;
 
     .header {
-        padding: 1em 1em;
+        padding: 0em 1em;
         display: flex;
         align-items: center;
 
@@ -21,7 +21,6 @@ color: white;
     }
 
     .container {
-        padding: 1em;
         display: flex;
         flex-direction: row;
         justify-content: center;
