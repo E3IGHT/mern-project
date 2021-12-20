@@ -4,10 +4,15 @@ import { Seats } from "./styled"
 import Row from "./rows/row-format"
 import Row1 from "./rows/row-format1"
 import Row2 from "./rows/row-format2"
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 export default function ChooseSeat () {
+
+    const nav = useLocation();
+    const w = nav.state;
+    
+
     return(
         <Seats>
             <div className="header">
